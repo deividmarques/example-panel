@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="pt-br" class="color-green-light">
+<head>
+	<meta charset="UTF-8">
+	<title>Exemplo de wai-aria</title>
+	<link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="http://assets.locaweb.com.br/locastyle/2.0.0-b7/stylesheets/locastyle.css">
+</head>
+<body>
+	<div id="wrap">
+
+		<header class="header" role="banner">
+			<div class="container">
+				<h1 class="project-name"><a href="#">Elementos com wai-aria</a></h1>
+				
+			</div>
+		</header>
+		  <!-- Menu -->
+		  <div class="nav-content">
+		  <nav class="menu" role="navigation">
+		  		<ul class="container">
+		  			<li><a href="modal.html" class="ico-home" role="menuitem">Home</a></li>
+		  			<li><a href="form.html" role="menuitem">Formulários</a></li>
+		  			<!-- <li><a href="abas.html" class="active" role="menuitem">Abas</a></li> -->
+		  			<li><a href="#" role="menuitem">Exemplo</a>
+		  				<ul>
+		  					<li><a href="#">Link 1</a></li>
+		  					<li><a href="#">Link 2</a></li>
+		  					<li><a href="#">Link 3</a></li>
+		  					<li><a href="#" aria-label="Este é o último link do submenu de exemplo">Link 4</a></li>
+		  				</ul>
+		  			</li>
+		  		</ul>
+		  	</nav>
+		  	<h2 class="title-sep visible-xs">Mais</h2>
+		  	<ul class="nav-mob-list visible-xs">
+		  		<li><a href="#" class="ico-help-circle">Ajuda e sugestões</a></li>
+		  	</ul>
+		  </div>
+
+
+		<main class="main">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 content" role="main">
+						<header class="header-content">
+							<h1 class="title-content">Formulários</h1>
+							<p>Faça um teste prático utilizando <a href="http://locaweb.github.io/locawebstyle/manual/praticas-padroes/acessibilidade/leitores-de-tela/" target="_blank">leitores de tela</a>.</p>
+						</header>
+						<form action="javascript:void(0);" method="post" class="validate" id="form_simple">
+							<div class="alert alert-success hide" role="alert">
+								<p>Mensagem enviada com sucesso.</p>
+							</div>
+							<fieldset>
+								<legend class="no-border">Formulário Simples</legend>
+								<p>(*) campos obrigatórios</p>
+								<div class="form-group">
+									<label for="name">Nome</label>*
+									<input class="form-control required" name="name" aria-required="true" type="text" id="name">
+								</div>
+								<div class="form-group">
+									<label for="email">E-mail</label>*
+									<input class="form-control email required" name="email" aria-required="true" type="text" id="email">
+								</div>
+								<div class="form-group">
+									<label for="msg">Mensagem</label>*
+									<textarea class="form-control required" cols="30" rows="10" name="msg" aria-required="true" id="msg"></textarea>
+								</div>
+								<input class="btn btn-primary" type="submit" aria-label="Enviar dados do formulário simples" value="Enviar dados">
+							</fieldset>
+						</form>
+						<hr>
+						<form action="javascript:void(0);" class="validate" id="form_placeholder">
+							<div class="alert alert-success hide" role="alert">
+								<p>Mensagem enviada com sucesso.</p>
+							</div>
+							<fieldset>
+								<legend class="no-border">Formulário com placeholder</legend>
+								<p>A classe <code>sr-only</code> (vem do bootstrap) esconde visualmente o label, mas não para o leitor de tela.</p>
+								<div class="form-group">
+									<label for="name2" class="sr-only">Digite seu nome</label>
+									<input class="form-control required" aria-required="true" placeholder="nome" type="text" id="name2">
+								</div>
+								<div class="form-group">
+									<label for="email2" class="sr-only">Digite seu e-mail</label>
+									<input class="form-control email required" placeholder="e-mail" name="email2" aria-required="true" type="text" id="email2">
+								</div>
+								<div class="form-group">
+									<label for="msg2" class="sr-only">Digite sua mensagem</label>
+									<textarea class="form-control required" placeholder="Mensagem" cols="30" rows="10" name="msg2" aria-required="true" id="msg2"></textarea>
+								</div>
+								<input class="btn btn-primary" type="submit" aria-label="Enviar dados do formulário com placeholder" value="Enviar dados">
+							</fieldset>
+						</form>
+					</div>
+
+				</div>
+			</div>
+		</main>
+	</div>
+
+
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="http://assets.locaweb.com.br/locastyle/2.0.0-b7/javascripts/locastyle.js"></script>
+	<script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.0/jquery.validate.js"></script>
+	<script type="text/javascript" src="validate.js"></script>
+
+</body>
+</html>
